@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Jaeyoung Kim, undergraduate researcher at the Generative Intelligence Lab, Korea University. Research interests include diffusion models, stochastic dynamics, and generative modeling.">
+  <title>Jaeyoung Kim | Research</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #15263b;
+      --muted: #47586c;
+      --accent: #215974;
+      --rule: #cedbe4;
+      --surface: #f1f6f9;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: white;
+      font: 1rem/1.7 system-ui, sans-serif;
+    }
+
+    a { color: var(--accent); text-underline-offset: 0.22em; }
+    a:hover { text-decoration-thickness: 2px; }
+    a:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+
+    .wrap { width: min(100% - 3rem, 65rem); margin-inline: auto; }
+
+    .site-nav {
+      min-height: 4.75rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .home {
+      display: grid;
+      width: 2.5rem;
+      height: 2.5rem;
+      place-items: center;
+      border: 1px solid var(--rule);
+      border-radius: 50%;
+      color: var(--ink);
+      font: 700 1rem Georgia, serif;
+      text-decoration: none;
+    }
+
+    .home:hover { background: var(--surface); }
+
+    .nav-links { display: flex; align-items: center; gap: clamp(1rem, 4vw, 2.25rem); }
+    .nav-links a { font-size: 0.9375rem; font-weight: 600; }
+
+    .profile {
+      background: linear-gradient(120deg, #f6f9fb, #edf4f7);
+      border-block: 1px solid var(--rule);
+      padding-block: clamp(2.75rem, 7vw, 5rem);
+    }
+
+    .profile h1, .section-title {
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: 400;
+    }
+
+    .profile h1 {
+      margin: 0.35rem 0 0.65rem;
+      font-size: clamp(2.9rem, 8vw, 5.25rem);
+      letter-spacing: -0.055em;
+      line-height: 1.03;
+    }
+
+    .role {
+      margin: 0;
+      color: var(--accent);
+      font-size: 0.875rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .affiliation { margin: 0; color: var(--muted); font-size: 1.0625rem; }
+
+    .intro {
+      max-width: 58ch;
+      margin: 1.7rem 0 0;
+      font-size: clamp(1.0625rem, 2vw, 1.1875rem);
+    }
+
+    .contact { margin: 1rem 0 0; font-weight: 600; }
+
+    .research {
+      display: grid;
+      grid-template-columns: minmax(12rem, 0.75fr) minmax(0, 2fr);
+      gap: clamp(1.5rem, 6vw, 5rem);
+      align-items: start;
+      padding-block: clamp(2.5rem, 6vw, 4rem);
+    }
+
+    .section-title { margin: 0; font-size: clamp(1.9rem, 4vw, 2.45rem); line-height: 1.15; }
+
+    .interests { padding: 0; margin: 0; list-style: none; }
+
+    .interests li {
+      padding: 1.1rem 0 1.25rem;
+      border-top: 1px solid var(--rule);
+    }
+
+    .interests li:last-child { border-bottom: 1px solid var(--rule); }
+
+    .interests h3 { margin: 0 0 0.2rem; font-size: 1.0625rem; line-height: 1.4; }
+    .interests p { margin: 0; color: var(--muted); }
+
+    @media (max-width: 41rem) {
+      .wrap { width: calc(100% - 2.5rem); }
+      .site-nav { min-height: 4rem; }
+      .research { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body id="top">
+  <header class="wrap">
+    <nav class="site-nav" aria-label="Main navigation">
+      <a class="home" href="#top" aria-label="Jaeyoung Kim, home">JK</a>
+      <div class="nav-links">
+        <a href="#research">Research</a>
+        <a href="https://github.com/sevenrich03">GitHub</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="profile" aria-labelledby="name">
+      <div class="wrap">
+        <p class="role">Undergraduate Researcher</p>
+        <h1 id="name">Jaeyoung Kim</h1>
+        <p class="affiliation">Generative Intelligence Lab<br>Computer Science · Korea University</p>
+        <p class="intro">I study diffusion and score-based generative models, with an emphasis on the stochastic processes behind them and how those ideas translate into practical implementations.</p>
+        <p class="contact"><a href="mailto:sevenrich03@gmail.com">sevenrich03@gmail.com</a></p>
+      </div>
+    </section>
+
+    <section id="research" class="wrap research" aria-labelledby="research-title">
+      <h2 id="research-title" class="section-title">Research interests</h2>
+      <ul class="interests">
+        <li>
+          <h3>Diffusion and score-based models</h3>
+          <p>Denoising, score estimation, and the stochastic differential equations that connect training and sampling.</p>
+        </li>
+        <li>
+          <h3>Generative modeling for structured data</h3>
+          <p>Learning complex distributions while accounting for structure in the generated samples.</p>
+        </li>
+        <li>
+          <h3>Applications of generative models</h3>
+          <p>Exploring how generative models can be used in molecular design and robotics.</p>
+        </li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>

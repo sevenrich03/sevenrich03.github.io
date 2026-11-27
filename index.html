@@ -61,6 +61,25 @@
       padding-block: clamp(2.75rem, 7vw, 5rem);
     }
 
+    .profile-layout {
+      display: grid;
+      grid-template-columns: 7.5rem minmax(0, 1fr);
+      gap: 1.75rem;
+      align-items: start;
+    }
+
+    .profile-photo {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 1;
+      object-fit: cover;
+      border: 3px solid white;
+      border-radius: 50%;
+      background: var(--surface);
+      box-shadow: 0 0 0 1px var(--rule);
+    }
+
     .profile h1, .section-title {
       font-family: Georgia, "Times New Roman", serif;
       font-weight: 400;
@@ -68,9 +87,9 @@
 
     .profile h1 {
       margin: 0.35rem 0 0.65rem;
-      font-size: clamp(2.9rem, 8vw, 5.25rem);
-      letter-spacing: -0.055em;
-      line-height: 1.03;
+      font-size: clamp(2.25rem, 5vw, 3.25rem);
+      letter-spacing: -0.045em;
+      line-height: 1.08;
     }
 
     .role {
@@ -117,6 +136,8 @@
     @media (max-width: 41rem) {
       .wrap { width: calc(100% - 2.5rem); }
       .site-nav { min-height: 4rem; }
+      .profile-layout { grid-template-columns: 1fr; gap: 1.125rem; }
+      .profile-photo { width: 5.5rem; }
       .research { grid-template-columns: 1fr; }
     }
   </style>
@@ -134,12 +155,15 @@
 
   <main>
     <section class="profile" aria-labelledby="name">
-      <div class="wrap">
-        <p class="role">Undergraduate Researcher</p>
-        <h1 id="name">Jaeyoung Kim</h1>
-        <p class="affiliation">Generative Intelligence Lab<br>Computer Science · Korea University</p>
-        <p class="intro">I study diffusion and score-based generative models, with an emphasis on the stochastic processes behind them and how those ideas translate into practical implementations.</p>
-        <p class="contact"><a href="mailto:sevenrich03@gmail.com">sevenrich03@gmail.com</a></p>
+      <div class="wrap profile-layout">
+        <img class="profile-photo" src="https://avatars.githubusercontent.com/u/113402175?s=320&amp;v=4" alt="Jaeyoung Kim’s GitHub profile photo" width="320" height="320">
+        <div>
+          <p class="role">Undergraduate Researcher</p>
+          <h1 id="name">Jaeyoung Kim</h1>
+          <p class="affiliation">Generative Intelligence Lab<br>Computer Science · Korea University</p>
+          <p class="intro">I study diffusion and score-based generative models, with an emphasis on the stochastic processes behind them and how those ideas translate into practical implementations.</p>
+          <p class="contact"><a href="mailto:sevenrich03@gmail.com">sevenrich03@gmail.com</a></p>
+        </div>
       </div>
     </section>
 
